@@ -1,2 +1,75 @@
-# Fruit-Classification-Deep-Learning-Project-Kinshuk-Lovepreet-Tapasya
-This repository contains our Deep Learning Group Project built by Tapasya (102215341), Kinshuk (102215015), and Lovepreet (102215167). The goal of the project is to classify fruit images using a pretrained EfficientNetB0 model with transfer learning and fine-tuning, especially when a large fruit dataset is not available.
+# Fruit Classification using EfficientNetB0
+
+This project implements a deep learning based **fruit image classification system** using **Transfer Learning with EfficientNetB0** in **TensorFlow / Keras**. The complete implementation is available in:
+
+fruit-classification.ipynb
+
+
+## Project Overview
+
+The objective of this project is to classify different types of fruits from images using a Convolutional Neural Network (CNN). EfficientNetB0 is used as the backbone model for high accuracy and fast convergence.
+
+The pipeline includes:
+- Data loading  
+- Image preprocessing and augmentation  
+- Transfer learning  
+- Fine-tuning  
+- Model evaluation  
+
+
+## Features
+
+- Transfer learning with EfficientNetB0  
+- Automatic data loading using `image_dataset_from_directory`  
+- Image augmentation and normalization  
+- Two-stage training:
+  - Feature extraction (base model frozen)
+  - Fine tuning (partial unfreezing)
+- Callbacks: EarlyStopping, ModelCheckpoint, ReduceLROnPlateau  
+- High accuracy with low overfitting  
+
+
+## Requirements
+
+- Python 3.8+  
+- TensorFlow 2.x  
+- NumPy  
+- Matplotlib (optional)  
+- Jupyter Notebook / Kaggle  
+
+Install dependencies:
+```bash
+pip install tensorflow numpy matplotlib
+
+## Dataset Structure
+
+The dataset must follow this structure:
+dataset/
+├── train/
+│   ├── class_1/
+│   ├── class_2/
+│   ├── class_3/
+│   └── ...
+└── val/
+    ├── class_1/
+    ├── class_2/
+    ├── class_3/
+    └── ...
+
+
+For Kaggle, set your paths like this:
+
+```python
+DATASET_ROOT = Path("/kaggle/input/YOUR_DATASET_NAME")
+TRAIN_DIR = DATASET_ROOT / "train"
+VAL_DIR = DATASET_ROOT / "val"
+
+## How to Run
+
+Open **fruit-classification.ipynb** in Kaggle or Jupyter Notebook  
+Update the dataset path shown above  
+Run all cells sequentially  
+The model will train in two stages and automatically save checkpoints  
+
+
+
