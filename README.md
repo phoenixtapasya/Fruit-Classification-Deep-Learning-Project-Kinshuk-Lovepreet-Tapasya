@@ -38,8 +38,8 @@ The pipeline includes:
 - Jupyter Notebook / Kaggle  
 
 Install dependencies:
-```bash
 pip install tensorflow numpy matplotlib
+
 
 ## Dataset Structure
 
@@ -57,9 +57,8 @@ dataset/
     └── ...
 
 
-For Kaggle, set your paths like this:
+## For Kaggle, set your paths like this:
 
-```python
 DATASET_ROOT = Path("/kaggle/input/YOUR_DATASET_NAME")
 TRAIN_DIR = DATASET_ROOT / "train"
 VAL_DIR = DATASET_ROOT / "val"
