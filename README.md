@@ -44,7 +44,7 @@ pip install tensorflow numpy matplotlib
 
 Open **fruit-classification.ipynb** in Kaggle or Jupyter Notebook  
 Update the dataset path 
-Run all cells sequentially  
+and run all cells sequentially  
 The model will train in two stages and automatically save checkpoints  
 
 
