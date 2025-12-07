@@ -40,29 +40,6 @@ The pipeline includes:
 Install dependencies:
 pip install tensorflow numpy matplotlib
 
-
-## Dataset Structure
-
-The dataset must follow this structure:
-dataset/
-├── train/
-│   ├── class_1/
-│   ├── class_2/
-│   ├── class_3/
-│   └── ...
-└── val/
-    ├── class_1/
-    ├── class_2/
-    ├── class_3/
-    └── ...
-
-
-## For Kaggle, set your paths like this:
-
-DATASET_ROOT = Path("/kaggle/input/YOUR_DATASET_NAME")
-TRAIN_DIR = DATASET_ROOT / "train"
-VAL_DIR = DATASET_ROOT / "val"
-
 ## How to Run
 
 Open **fruit-classification.ipynb** in Kaggle or Jupyter Notebook  
